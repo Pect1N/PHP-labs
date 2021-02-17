@@ -2,27 +2,12 @@
 <head>
 	<title>Задание 3</title>
 </head>
-<body>
+<body bgcolor = #33ff00>
 	<?php
-		$object = array('Название'=>array('Гантеля', 'Перекладина'), 'Вес'=>array('5', '0'), 'Производитель'=>array('A', 'B'), 'Применение'=>array('Руки', 'Спина'));
-		$sobject = array('Название'=>'Гантеля', 'Вес'=>'5', 'Производитель'=>'A', 'Применение'=>'Руки');
+		$object = array('Гантеля'=>array('Гантеля', '5', 'A', 'Руки'), 'Перекладина'=>array('Перекладина', '0', 'B', 'Спина'));
+		$sobject = array('Гантеля'=>array('Гантеля', '5', 'A', 'Руки'), 'Блин'=>array('Блин', '2', 'С', 'Руки'), 'Дорожка'=>array('Беговая дорожка', '40', 'B', 'Ноги'), 'Велотренажер'=>array('Велотренажер', '40', 'D', 'Ноги'));
 	?>
-	<table align=center border=1>
-	<tr align=center>
-		<th>Название</th>
-		<th>Вес</th>
-		<th>Производитель</th>
-		<th>Применение</th>
-	</tr>
-	<tr align=center>
-		<td> <?php echo $sobject['Название'] ?> </td>
-		<td> <?php echo $sobject['Вес'] ?> </td>
-		<td> <?php echo $sobject['Производитель'] ?> </td>
-		<td> <?php echo $sobject['Применение'] ?> </td>
-	</tr>
-	</table>
-	<hr>
-	<table align=center border=1>
+	<table align=center border=1 bgcolor=red>
 		<tr align=center>
 			<th>Название</th>
 			<th>Вес</th>
@@ -46,6 +31,57 @@
 				<?php
 			}
 		?>
+	</table>
+	<hr>
+	<table align=center border=1 bgcolor=green>
+		<tr align=center>
+			<th colspan=6>Силовое</th>
+			<th colspan=6>Кардио</th>
+		</tr>
+		<tr>
+			<?php
+				foreach($sobject as $name)
+				{
+					$flag = 0;
+					foreach($name as $subname)
+					{
+						if($flag == 0)
+						{
+							?>
+								<td colspan=3>
+									<?php
+											echo $subname;
+											$flag = 1;
+									?>
+								</td>
+							<?php
+						}
+					}
+				}
+			?>
+		</tr>
+		<tr>
+			<?php
+					foreach($sobject as $name)
+					{
+						$flag = 0;
+						foreach($name as $subname)
+						{
+							if($flag != 0)
+							{
+								?>
+									<td>
+										<?php
+												echo $subname;
+										?>
+									</td>
+								<?php
+							}
+							$flag = 1;
+						}
+					}
+				?>
+		</tr>
 	</table>
 
 	<form action="http://myfirstsite.ru/Lab_1.1.php">

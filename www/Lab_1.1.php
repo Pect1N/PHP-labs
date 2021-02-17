@@ -2,7 +2,7 @@
 <head>
 	<title>Таблица</title>
 </head>
-<body>
+<body bgcolor = #33ff00>
 	<?php
 		$SecondName = 'Иванов';
 		$Name = 'Иван';

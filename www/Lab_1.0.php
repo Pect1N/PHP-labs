@@ -2,7 +2,7 @@
 	<head>
 		<title> Заполнение формы </title>
 	</head>
-	<body bgcolor = "#33ff00">
+	<body bgcolor = #33ff00>
 		<!-- Работа с заполнением данных -->
 		<form action="http://myfirstsite.ru/Lab_1.1.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="Фамилия" placeholder="Фамилия"> <br>

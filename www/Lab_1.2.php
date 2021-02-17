@@ -2,8 +2,8 @@
 <head>
 	<title>Задание 2</title>
 </head>
-<body>
-	<table border="1">
+<body bgcolor = #33ff00>
+	<table border=1 bgcolor=#0033ff>
 		<tr>
 			<td colspan="2">Введенные данные</td>
 		</tr>
