@@ -47,8 +47,18 @@
 	<hr>
 	<table align=center border=1 bgcolor=green>
 		<tr align=center>
-			<th colspan=6>Силовое</th>
-			<th colspan=6>Кардио</th>
+			<?php
+				foreach($sobject as $key=>$d1)
+				{
+					?>
+					<th colspan=6>
+						<?php
+						echo $key;
+						?>
+					</th>
+					<?php
+				}
+			?>
 		</tr>
 		<tr>
 			<?php
