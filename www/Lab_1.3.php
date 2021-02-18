@@ -27,15 +27,15 @@
 			<th>Применение</th>
 		</tr>
 		<?php
-			foreach($object as $name)
+			foreach($object as $d1)
 			{
 				?>
 				<tr>
 				<?php
-				foreach($name as $subname)
+				foreach($d1 as $d2)
 				{
 					?>
-					<td> <?php echo $subname ?> </td>
+					<td> <?php echo $d2 ?> </td>
 					<?php
 				}
 				?>
@@ -52,19 +52,19 @@
 		</tr>
 		<tr>
 			<?php
-				foreach($sobject as $name)
+				foreach($sobject as $d1)
 				{
-					foreach($name as $subname)
+					foreach($d1 as $d2)
 					{
 						$flag = 0;
-						foreach($subname as $subsubname)
+						foreach($d2 as $d3)
 						{
 							if($flag == 0)
 							{
 								?>
 									<th colspan=3>
 										<?php
-												echo $subsubname;
+												echo $d3;
 												$flag = 1;
 										?>
 									</th>
@@ -77,19 +77,19 @@
 		</tr>
 		<tr>
 			<?php
-					foreach($sobject as $name)
+					foreach($sobject as $d1)
 					{
-						foreach($name as $subname)
+						foreach($d1 as $d2)
 						{
 							$flag = 0;
-							foreach($subname as $subsubname)
+							foreach($d2 as $d3)
 							{
 								if($flag != 0)
 								{
 									?>
 										<td>
 											<?php
-													echo $subsubname;
+													echo $d3;
 											?>
 										</td>
 									<?php
