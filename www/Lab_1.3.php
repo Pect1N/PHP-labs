@@ -1,8 +1,9 @@
 <html>
 <head>
 	<title>Задание 3</title>
+	<link rel='stylesheet' href='style.css'>
 </head>
-<body bgcolor = #33ff00>
+<body>
 	<?php
 		$object = array(
 			'Гантеля'=>array('Гантеля', '5', 'A', 'Руки'),
@@ -19,8 +20,8 @@
 			)
 		);
 	?>
-	<table align=center border=1 bgcolor=red>
-		<tr align=center>
+	<table border=1 bgcolor=red>
+		<tr>
 			<th>Название</th>
 			<th>Вес</th>
 			<th>Производитель</th>
@@ -45,8 +46,8 @@
 		?>
 	</table>
 	<hr>
-	<table align=center border=1 bgcolor=green>
-		<tr align=center>
+	<table border=1 bgcolor=green>
+		<tr>
 			<?php
 				foreach($sobject as $key=>$d1)
 				{

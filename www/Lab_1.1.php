@@ -1,8 +1,9 @@
 <html>
 <head>
 	<title>Таблица</title>
+	<link rel='stylesheet' href='style.css'>
 </head>
-<body bgcolor = #33ff00>
+<body>
 	<?php
 		$SecondName = 'Иванов';
 		$Name = 'Иван';
@@ -13,7 +14,7 @@
 		$Mass = '80';
 	?>
 	<!-- Вывод таблицы с данными -->
-	<table bgcolor = "yellow" border="1" align = "center">
+	<table bgcolor = "yellow" border="1">
 		<tr>
 			<th>Фамилия</th>
 			<th>Имя</th>
@@ -21,7 +22,7 @@
 			<th>Дата рождения</th>
 			<th>Место рождения</th>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<td> <?php echo htmlspecialchars($_POST['Фамилия']); ?> </td>
 			<td> <?php echo ($_POST['Имя']); ?> </td>
 			<td> <?php echo ($_POST['Отчество']); ?> </td>
@@ -31,18 +32,18 @@
 		<tr>
 			<th colspan="5"> Дополнительная информация </th>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<td rowspan="2"> <img src="1.jpg" alt="" width = "50px" height="50px"> </td>
 			<th> Рост </th>
 			<td colspan="3"> <?php echo ($_POST['Рост']); ?> </td>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<th> Вес </th>
 			<td colspan="3"> <?php echo ($_POST['Вес']); ?> </td>
 		</tr>
 	</table>
 	<hr>
-	<table bgcolor = red border="1" align = "center">
+	<table bgcolor = red border="1">
 		<tr>
 			<th>Фамилия</th>
 			<th>Имя</th>
@@ -50,7 +51,7 @@
 			<th>Дата рождения</th>
 			<th>Место рождения</th>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<td> <?php echo $SecondName; ?> </td>
 			<td> <?php echo $Name; ?> </td>
 			<td> <?php echo $FatherName; ?> </td>
@@ -60,12 +61,12 @@
 		<tr>
 			<th colspan="5"> Дополнительная информация </th>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<td rowspan="2"> <img src="1.jpg" alt="" width = "50px" height="50px"> </td>
 			<th> Рост </th>
 			<td colspan="3"> <?php echo $Hight; ?> </td>
 		</tr>
-		<tr align = "center">
+		<tr>
 			<th> Вес </th>
 			<td colspan="3"> <?php echo $Mass; ?> </td>
 		</tr>

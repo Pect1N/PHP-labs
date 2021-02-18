@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<title> Заполнение формы </title>
+		<link rel='stylesheet' href='style.css'>
 	</head>
-	<body bgcolor = #33ff00>
+	<body>
 		<!-- Работа с заполнением данных -->
 		<form action="http://myfirstsite.ru/Lab_1.1.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="Фамилия" placeholder="Фамилия"> <br>
