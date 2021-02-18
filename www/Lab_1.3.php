@@ -4,8 +4,20 @@
 </head>
 <body bgcolor = #33ff00>
 	<?php
-		$object = array('Гантеля'=>array('Гантеля', '5', 'A', 'Руки'), 'Перекладина'=>array('Перекладина', '0', 'B', 'Спина'));
-		$sobject = array('Гантеля'=>array('Гантеля', '5', 'A', 'Руки'), 'Блин'=>array('Блин', '2', 'С', 'Руки'), 'Дорожка'=>array('Беговая дорожка', '40', 'B', 'Ноги'), 'Велотренажер'=>array('Велотренажер', '40', 'D', 'Ноги'));
+		$object = array(
+			'Гантеля'=>array('Гантеля', '5', 'A', 'Руки'),
+			'Перекладина'=>array('Перекладина', '0', 'B', 'Спина')
+		);
+		$sobject = array(
+			'Силовые'=>array(
+				'Гантеля'=>array('Гантеля', '5', 'A', 'Руки'),
+				'Блин'=>array('Блин', '2', 'С', 'Руки')
+			),
+			'Кардио'=>array(
+				'Дорожка'=>array('Беговая дорожка', '40', 'B', 'Ноги'),
+				'Велотренажер'=>array('Велотренажер', '40', 'D', 'Ноги')
+			)
+		);
 	?>
 	<table align=center border=1 bgcolor=red>
 		<tr align=center>
@@ -42,19 +54,22 @@
 			<?php
 				foreach($sobject as $name)
 				{
-					$flag = 0;
 					foreach($name as $subname)
 					{
-						if($flag == 0)
+						$flag = 0;
+						foreach($subname as $subsubname)
 						{
-							?>
-								<td colspan=3>
-									<?php
-											echo $subname;
-											$flag = 1;
-									?>
-								</td>
-							<?php
+							if($flag == 0)
+							{
+								?>
+									<th colspan=3>
+										<?php
+												echo $subsubname;
+												$flag = 1;
+										?>
+									</th>
+								<?php
+							}
 						}
 					}
 				}
@@ -64,20 +79,23 @@
 			<?php
 					foreach($sobject as $name)
 					{
-						$flag = 0;
 						foreach($name as $subname)
 						{
-							if($flag != 0)
+							$flag = 0;
+							foreach($subname as $subsubname)
 							{
-								?>
-									<td>
-										<?php
-												echo $subname;
-										?>
-									</td>
-								<?php
+								if($flag != 0)
+								{
+									?>
+										<td>
+											<?php
+													echo $subsubname;
+											?>
+										</td>
+									<?php
+								}
+								$flag = 1;
 							}
-							$flag = 1;
 						}
 					}
 				?>
