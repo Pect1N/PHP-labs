@@ -40,27 +40,115 @@
         </td>
       </tr>
     </table>
+    <hr>
     <?php
       $test;
       if(isset($_POST['file']))
       {
         $test = $_POST['file'];
         if($test == 'f1')
-          echo hello;
+          echo H;
         elseif($test == 'f2')
-          echo world;
+          echo e;
         elseif($test == 'f3')
-          echo HW;
+          echo l;
       }
       if(isset($_POST['param']))
       {
         $test = $_POST['param'];
         if($test == 's1')
-          echo Hello;
+        {
+          ?>
+          <table>
+            <?php
+            $j = 1;
+            while($j <= 10)
+            {
+              ?>
+              <tr>
+                <?php
+                $i = 1;
+                while ($i <= 10)
+                {
+                  ?>
+                  <td>
+                    <?php
+                      echo $i * $j;
+                      $i++;
+                    ?>
+                  </td>
+                  <?php
+                }
+                $j++;
+                ?>
+              </tr>
+              <?php
+            }
+            ?>
+          </table>
+          <?php
+        }
         elseif($test == 's2')
-          echo World;
+        {
+          $summ = 0;
+          for($i = 1; $i < 100; $i+=2)
+          {
+            echo $summ += $i;
+            echo ' ';
+            if($summ % 10 == 9)
+            {
+              ?>
+              <br>
+              <?php
+            }
+          }
+        }
         elseif($test == 's3')
-          echo hw;
+        {
+          ?>
+          <form method='post' action="">
+            <input type="text" name="Слово" placeholder="Введите слово"> <br>
+            <input type="submit" name='Перевести'>
+          </form>
+          <?php
+        }
+      }
+      if(isset($_POST['Слово']))
+      {
+        ?>
+        <p>Ваш перевод:
+        <?php
+        $test = $_POST['Слово'];
+        switch ($test)
+        {
+          case 'Кошка':
+            echo Cat;
+            break;
+          case 'Собака':
+            echo Dog;
+            break;
+          case 'Дом':
+            echo House;
+            break;
+          case 'День':
+            echo Day;
+            break;
+          case 'Ночь':
+            echo Night;
+            break;
+          case 'Он':
+            echo He;
+            break;
+          case 'Она':
+            echo She;
+            break;                                          
+          default:
+            echo Wrong;
+            break;
+        }
+        ?>
+        </p>
+        <?php
       }
     ?>
   </body>
