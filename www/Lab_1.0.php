@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title> Заполнение формы </title>
-		<link rel='stylesheet' href='style.css'>
+		<link rel='stylesheet' href='style_1.css'>
 	</head>
 	<body>
 		<!-- Работа с заполнением данных -->

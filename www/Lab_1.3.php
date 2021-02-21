@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Задание 3</title>
-	<link rel='stylesheet' href='style.css'>
+	<link rel='stylesheet' href='style_1.css'>
 </head>
 <body>
 	<?php

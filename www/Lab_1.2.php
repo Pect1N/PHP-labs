@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Задание 2</title>
-	<link rel='stylesheet' href='style.css'>
+	<link rel='stylesheet' href='style_1.css'>
 </head>
 <body>
 	<table border=1 bgcolor=#0033ff>
