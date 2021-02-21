@@ -1,0 +1,24 @@
+body {
+  background-color: #33ff00;
+}
+/*
+table {
+  border: 2px double black;
+  border-collapse: separate;
+  text-align: center;
+  margin: auto;
+}
+*/
+table {
+  width: 100%; /* Ширина таблицы */
+  border-collapse: collapse; /* Отображать только одинарные линии */
+}
+tr {
+  text-align: center; /* Выравнивание по левому краю */
+  background: rgb(43, 8, 243); /* Цвет фона ячеек */
+}
+td {
+  padding: 5px; /* Поля вокруг содержимого ячеек */
+  color: #efff0d;
+  border: 2px solid rgb(187, 4, 74); /* Граница вокруг ячеек */
+}
