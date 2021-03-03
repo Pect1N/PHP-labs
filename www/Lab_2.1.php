@@ -11,7 +11,7 @@
     <p>Персональная информация</p>
     <p>ВВЕДИТЕ ИМЯ: <input type="text" name='Имя'></p>
     <p>ВВЕДИТЕ E-MAIL: <input type="text" name='Мэйл'></p>
-    <p>КОММЕНТАРИЙ: <input type="text" name='comment'></p>
+    <p>КОММЕНТАРИЙ: <br> <textarea cols = '40' rows = '3' type="text" name='comment'></textarea></p>
     <hr>
     <p>Дополнительная информация</p>
     <p>ДОСТАВКА:
@@ -28,7 +28,7 @@
         <option value="s3">Цилиндрическая</option>
       </select>
     </p>
-    <p>ЦВЕТ ПОСЫЛКИ: </p>
+    <p>ЦВЕТ ПОСЫЛКИ: <input type="color" name='Цвет'></p>
     <p>КОЛИЧЕСТВО: <input type="text" name='number'></p>
     <table>
       <tr>
