@@ -3,6 +3,9 @@
     <link rel='stylesheet' href='style_2.css'> <!-- add css -->
   </head>
   <body>
+  <form action="http://myfirstsite.ru/Lab_2.1.php">
+		<input type="submit" value="Next">
+	</form>
     <!-- create table -->
     <table>
       <!-- first line -->
@@ -47,11 +50,30 @@
       {
         $test = $_POST['file'];
         if($test == 'f1')
-          echo H;
+        {
+          $fp = fopen("file.txt", "w");
+          $i = 1;
+          while ($i < 11)
+          {
+            $text = "$i элемент\n";
+            fwrite($fp, $text);
+            $i++;
+          }
+          fclose($fp);
+        }
         elseif($test == 'f2')
-          echo e;
+        {
+          $fp = fopen("file.txt", "a");
+          fwrite($fp, "ещё элемент\n");
+          fclose($fp);
+        }
         elseif($test == 'f3')
-          echo l;
+        {
+          $fp = fopen("file.txt", "r");
+          while(!feof($fp))
+            echo fgets($fp)."<br>";
+          fclose($fp);
+        }
       }
       if(isset($_POST['param']))
       {

@@ -3,7 +3,7 @@ body {
 }
 
 table {
-  width: 100%;
+  margin: auto;
   border-collapse: collapse;
 }
 tr {
@@ -12,9 +12,9 @@ tr {
   background: rgb(43, 8, 243);
 }
 td {
-  padding: 5px;
+  padding: 3px;
   /*set text color*/
   color: #efff0d;
   /*set border parameters*/
-  border: 2px solid rgb(187, 4, 74);
+  border: 3px solid rgb(209, 72, 8);
 }
